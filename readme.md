@@ -53,7 +53,7 @@ Ran all test suites.
 
 LeetCode 題目
 | 編號 | 名稱 | 難度 | 簡述(自主翻譯) | 解題演算法 | 原始連結 |
-|-----|-----|------|-----------|----------|--------|
+| ---:| ---- | --- | ------------ | -------- | ------- |
 |3|Longest Substring Without Repeating Characters|Medium|注入一組字串，找出該字串中不曾重複的子字串最大長度。|[MODULE](https://gitlab.com/tsuyiren/code-quest/blob/master/src/quests/leetcode/lengthOfLongestSubstring.js)|[LINK](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
 |11|Container With Most Water|Medium|注入一組長度至少為 2 的正整數陣列，將該陣列繪製成直條圖，每個值的排序代表直條圖的 X 軸座標，該值的數為直條圖 Y 軸高度。找出任意兩條線，兩線之間可以容納最多水量，並返回該水量的面積。|[MODULE](https://gitlab.com/tsuyiren/code-quest/blob/master/src/quests/leetcode/maxArea.js)|[LINK](https://leetcode.com/problems/container-with-most-water/)
 |26|Remove Duplicates from Sorted Array|Easy|注入一串排序過的數字串，刪除所有重複出現的項目並返回一組新字串的長度，新字串內所有的數字都只能出現一次。特別規則，不可使用額外的空間進行運算，只能在注入的數字串中進行修改得到結果。|[MODULE](https://gitlab.com/tsuyiren/code-quest/blob/master/src/quests/leetcode/removeDuplicates.js)|[LINK](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
