@@ -3,21 +3,26 @@
 
 題目擷取自 <a href="https://leetcode.com/problemset/all/">LeetCode</a> ，以 JS 整合成 local 端應用。
 
-####**主要結構**
+#### **主要結構**
+
 **JS Module**  依照項目編寫解題演算法
+
 **Jest 單元測試** 執行 module 演算法，並注入所需的項目進行驗證，觀測返回的結果是否符合預期。
 
-####**檔案結構**
-_**ROOT**_
-  _∟&emsp;src_
-    _|&emsp;&emsp;∟&emsp;leetcode_
-      _|&emsp;&emsp;|&emsp;&emsp;∟&emsp;<quest_name>.js_&emsp;&emsp;&emsp;&emsp;放置解題演算法的 js module
-    _|&emsp;&emsp;∟&emsp;solutions.js_&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;將所有演算法包裝輸出
-  _∟&emsp;test_
-    _&emsp;&emsp;∟&emsp;quest.test.js_&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;引用 solution.js 的演算法並進行注入及觀測
+#### **檔案結構**
 
-####**如何開始**
+_**ROOT**_<br/>
+  _∟&emsp;src_<br/>
+    _|&emsp;&emsp;∟&emsp;leetcode_<br/>
+      _|&emsp;&emsp;|&emsp;&emsp;∟&emsp;<quest_name>.js_&emsp;&emsp;&emsp;&emsp;放置解題演算法的 js module<br/>
+    _|&emsp;&emsp;∟&emsp;solutions.js_&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;將所有演算法包裝輸出<br/>
+  _∟&emsp;test_<br/>
+    _&emsp;&emsp;∟&emsp;quest.test.js_&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;引用 solution.js 的演算法並進行注入及觀測<br/>
+
+#### **如何開始**
+
 下載 gitlab
+
 ```bash
 git clone https://gitlab.com/tsuyiren/code-quest.git
 
@@ -25,16 +30,19 @@ cd code-quest
 ```
 
 安裝 npm 相關依賴
+
 ```bash
 npm install
 ```
 
 執行測試
+
 ```bash
 npm run test
 ```
 
 返回的測試結果
+
 ```bash
 Test Suites: 1 passed, 1 total
 Tests:       21 passed, 21 total
