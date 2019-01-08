@@ -9,7 +9,8 @@ You're given strings J representing the types of stones that are jewels, and S r
 Each character in S is a type of stone you have.
 You want to know how many of the stones you have are also jewels.
 The letters in J are guaranteed distinct, and all characters in J and S are letters.
-Letters are case sensitive, so "a" is considered a different type of stone from "A".`, () => {
+Letters are case sensitive, so "a" is considered a different type of stone from "A".
+`, () => {
 
   test(`
   Input: J = "aA", S = "aAAbbbb"
@@ -119,6 +120,16 @@ The input strings are both non-empty and contains only characters 1 or 0.
     expect(solutions.addBinary(a, b)).toBe('10101')
   })
 
+  test(`
+  Input: a = "110110101010101010101010101111110101010101010101010101110000101010101011011111110100000000000011111111111010",
+  b = "1101101010101010101010101011111101010101010101010101011100001010101010110111111101010"
+  Output: "110110101010101010101100011101001010101010101010110101011011010101010110001011010101010101011010111111100100"
+  `, () => {
+    let a = '110110101010101010101010101111110101010101010101010101110000101010101011011111110100000000000011111111111010'
+    let b = '1101101010101010101010101011111101010101010101010101011100001010101010110111111101010'
+    expect(solutions.addBinary(a, b)).toBe('110110101010101010101100011101001010101010101010110101011011010101010110001011010101010101011010111111100100')
+  })
+
 })
 
 describe(`
@@ -147,6 +158,15 @@ You may return the answer in any order.
     let words = ['abc', 'deq', 'mee', 'aqq', 'dkd', 'ccc']
     let pattern = 'abb'
     expect(solutions.findAndReplacePattern(words, pattern).toString()).toBe(['mee', 'aqq'].toString())
+  })
+
+  test(`
+  Input: words = ["acdd","deqq","meee","aaqq","ddkd","cccc"], pattern = "aaaa"
+  Output: ["cccc"]
+  `, () => {
+    let words = ['acdd', 'deqq', 'meee', 'aaqq', 'ddkd', 'cccc']
+    let pattern = 'aaaa'
+    expect(solutions.findAndReplacePattern(words, pattern).toString()).toBe(['cccc'].toString())
   })
 
 })
@@ -187,6 +207,13 @@ Given a string, find the length of the longest substring without repeating chara
     expect(solutions.lengthOfLongestSubstring(input)).toBe(3)
   })
 
+  test(`
+  Input: "qwksskwqskwqskwqskwqavcsewqawks"
+  Output: 7
+  `, () => {
+    let input = 'qwksskwqskwqskwqskwqavcsewqawks'
+    expect(solutions.lengthOfLongestSubstring(input)).toBe(8)
+  })
 })
 
 describe(`
@@ -312,6 +339,28 @@ The island doesn't have "lakes" (water inside that isn't connected to the water 
     expect(solutions.islandPerimeter(input)).toBe(16)
   })
 
+  test(`
+  Input:
+  [
+    [0,1,0,0,0],
+    [1,1,1,1,1],
+    [1,1,0,0,1],
+    [1,1,0,0,1],
+    [1,1,0,1,1]
+  ]
+
+  Output: 28
+  `, () => {
+    let input = [
+      [0, 1, 0, 0, 0],
+      [1, 1, 1, 1, 1],
+      [1, 1, 0, 0, 1],
+      [1, 1, 0, 0, 1],
+      [1, 1, 0, 1, 1]
+    ]
+    expect(solutions.islandPerimeter(input)).toBe(28)
+  })
+
 })
 
 describe(`
@@ -334,7 +383,7 @@ Given a non-empty integer array of size n, find the minimum number of moves requ
 
   [1,2,3]  =>  [2,3,3]  =>  [3,4,3]  =>  [4,4,4]
   `, () => {
-    let input = [1,2,3]
+    let input = [1, 2, 3]
     expect(solutions.minMoves(input)).toBe(3)
   })
 
@@ -352,7 +401,7 @@ Find the kth largest element in an unsorted array. Note that it is the kth large
   Input: [3,2,1,5,6,4] and k = 2
   Output: 5
   `, () => {
-    let input = [3,2,1,5,6,4]
+    let input = [3, 2, 1, 5, 6, 4]
     let k = 2
     expect(solutions.findKthLargest(input, k)).toBe(5)
   })
@@ -361,7 +410,7 @@ Find the kth largest element in an unsorted array. Note that it is the kth large
   Input: [3,2,3,1,2,4,5,5,6] and k = 4
   Output: 4
   `, () => {
-    let input = [3,2,3,1,2,4,5,5,6]
+    let input = [3, 2, 3, 1, 2, 4, 5, 5, 6]
     let k = 4
     expect(solutions.findKthLargest(input, k)).toBe(4)
   })
@@ -382,8 +431,16 @@ Note: You may not slant the container and n is at least 2.
   Input: [1,8,6,2,5,4,8,3,7]
   Output: 49
   `, () => {
-    let input = [1,8,6,2,5,4,8,3,7]
+    let input = [1, 8, 6, 2, 5, 4, 8, 3, 7]
     expect(solutions.maxArea(input)).toBe(49)
+  })
+
+  test(`
+  Input: [9,8,6,2,5,4,8,2,7]
+  Output: 56
+  `, () => {
+    let input = [9, 8, 6, 2, 5, 4, 8, 2, 7]
+    expect(solutions.maxArea(input)).toBe(56)
   })
 
 })
