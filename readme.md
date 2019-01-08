@@ -11,12 +11,12 @@
 #### **檔案結構**
 
 _**ROOT**_<br/>
-  _∟&emsp;src_<br/>
-    _|&emsp;&emsp;∟&emsp;leetcode_<br/>
-      _|&emsp;&emsp;|&emsp;&emsp;∟&emsp;<quest_name>.js_&emsp;&emsp;&emsp;&emsp;放置解題演算法的 js module<br/>
-    _|&emsp;&emsp;∟&emsp;solutions.js_&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;將所有演算法包裝輸出<br/>
-  _∟&emsp;test_<br/>
-    _&emsp;&emsp;∟&emsp;quest.test.js_&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;引用 solution.js 的演算法並進行注入及觀測<br/>
+  ∟&emsp;_**src**_<br/>
+    |&emsp;&emsp;∟&emsp;_**leetcode**_<br/>
+      |&emsp;&emsp;|&emsp;&emsp;∟&emsp;_<quest_name>.js_&emsp;&emsp;&emsp;&emsp;放置解題演算法的 js module<br/>
+    |&emsp;&emsp;∟&emsp;_solutions.js_&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;將所有演算法包裝輸出<br/>
+  ∟&emsp;_**test**_<br/>
+    &emsp;&emsp;∟&emsp;_quest.test.js_&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;引用 solution.js 的演算法並進行注入及觀測<br/>
 
 #### **如何開始**
 
