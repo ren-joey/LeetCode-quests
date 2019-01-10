@@ -1,13 +1,13 @@
 <h5 align="center">What is this?</h5>
-<h2 align="center">LeetCode 解題集</h2>
+<h1 align="center">LeetCode 解題集</h1>
 
 題目擷取自 <a href="https://leetcode.com/problemset/all/">LeetCode</a> ，以 JS 整合成 local 端應用。
 
-#### **主要架構**
+## **主要架構**
 **JS Module**  依照項目編寫解題演算法
 **Jest 單元測試** 執行 module 演算法，並注入所需的項目進行驗證，觀測返回的結果是否符合預期。
 
-#### **檔案結構**
+## **檔案結構**
 
 _**ROOT**_<br/>
   ∟&emsp;_**src**_<br/>
@@ -17,7 +17,7 @@ _**ROOT**_<br/>
   ∟&emsp;_**test**_<br/>
     &emsp;&emsp;∟&emsp;_quest.test.js_&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;引用 solution.js 的演算法並進行注入及觀測<br/>
 
-#### **如何開始**
+## **如何開始**
 
 下載 gitlab
 
@@ -49,9 +49,9 @@ Time:        1.659s
 Ran all test suites.
 ```
 
-#### **題目總覽**
+## **題目總覽**
 
-LeetCode 題目
+#### **LeetCode 題目**
 
 | **NO** | **名稱** | **難度** | **簡述**(自主翻譯) | **演算法** | **原始連結** |
 | ------:|---------|----------|------------------|-----------|------------|
@@ -73,5 +73,5 @@ LeetCode 題目
 |890|Find and Replace Pattern|Medium|你將得到ㄧ組字串及一個字串模板，欲知哪些字串與字串模板的規則吻合，當字串的排序與重複狀態與模板相符，謂之吻合，例如 'abb' 與 'ezz' 吻合，'abc' 與 'wxy' 吻合，'aaa' 與 'qqc' 不吻合，'cde' 與 'cdd' 不吻合。返回一組新陣列內容包含所有與模板吻合的字串。|[MODULE](https://gitlab.com/tsuyiren/code-quest/blob/master/src/quests/leetcode/findAndReplacePattern.js)|[LINK](https://leetcode.com/problems/find-and-replace-pattern/)|
 |929|Unique Email Addresses|Easy|每個 Email 都包含一組本地名稱及網域名稱，由 @ 符號將兩者分隔開來，例如 alice@leetcode.com，alice 是本地名稱，leetcode.com 是網域名稱。除了小寫字符外，這些 email 還會包含 '.' 或 '+'。如果將 '.' 添加在本地名稱，伺服器將會忽略該字符，例如  "alice.z@leetcode.com" 與 "alicez@leetcode.com" 將會寄送到相同的位置。如果將 '+' 添加在本地名稱，所有 '+' 之後的字符將會被省略，這讓 email 規格容許添加篩選內容在 email 中，例如 m.y+name@email.com 將被寄送到 my@email.com (注意：以上規則不適用於網域名稱)。試著注入一串 email，相同的 email 位置只會被寄送一次，計算總共有多少不同 email 將被寄出？|[MODULE](https://gitlab.com/tsuyiren/code-quest/blob/master/src/quests/leetcode/numUniqueEmails.js)|[LINK](https://leetcode.com/problems/unique-email-addresses/)|
 
-#### **相關依賴**
+## **相關依賴**
 <a href="https://leetcode.com/problemset/all/"><img src="https://camo.githubusercontent.com/4d21a2a0f2bb751bba6bae08f56fbbb87e0b0460/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f313336302f312a357164504c733478395475616276514a7775376975412e706e67" width="200" /></a>&emsp;<a href="https://jestjs.io/"><img src="https://camo.githubusercontent.com/b8606e6a237d8e7e7800067f0f739129da1fa6f8/687474703a2f2f7365656b6c6f676f2e636f6d2f696d616765732f4a2f6a6573742d6c6f676f2d463939303145424246372d7365656b6c6f676f2e636f6d2e706e67" width="50" /></a>&emsp;&emsp;<a href="https://eslint.org/"><img src="https://miro.medium.com/max/970/1*adPg-Z859DytSea5oLARGg.png" width="150"  /></a>
