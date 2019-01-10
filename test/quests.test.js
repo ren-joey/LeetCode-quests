@@ -572,3 +572,86 @@ You may assume the given string consists of lowercase English letters only and i
     expect(solutions.repeatedSubstringPattern(input)).toBeTruthy()
   })
 })
+
+describe(`
+==================================================================
+498. Diagonal Traverse
+Medium - https://leetcode.com/problems/diagonal-traverse/
+==================================================================
+Given a matrix of M x N elements (M rows, N columns), return all elements of the matrix in diagonal order as shown in the below image.
+`, () => {
+
+  test(`
+  Input:
+  []
+
+  Output:  []
+  `, () => {
+    let input = []
+    let expected = []
+    expect(solutions.findDiagonalOrder(input).length).toBe(expected.length)
+  })
+
+  test(`
+  Input:
+  [
+  [ 1, 2, 3 ],
+  [ 4, 5, 6 ],
+  [ 7, 8, 9 ]
+  ]
+
+  Output:  [1,2,4,7,5,3,6,8,9]
+  `, () => {
+    let input = [
+      [1, 2, 3],
+      [4, 5, 6],
+      [7, 8, 9]
+    ]
+    let expected = [1, 2, 4, 7, 5, 3, 6, 8, 9]
+    expect(solutions.findDiagonalOrder(input).toString()).toBe(expected.toString())
+  })
+
+  test(`
+  Input:
+  [
+    [1, 2, 3, 3, 7, 1],
+    [4, 5, 6, 2, 1, 5],
+    [7, 8, 9, 7, 8, 1]
+  ]
+
+  Output:  [1, 2, 4, 7, 5, 3, 3, 6, 8, 9, 2, 7, 1, 1, 7, 8, 5, 1]
+  `, () => {
+    let input = [
+      [1, 2, 3, 3, 7, 1],
+      [4, 5, 6, 2, 1, 5],
+      [7, 8, 9, 7, 8, 1]
+    ]
+    let expected = [1, 2, 4, 7, 5, 3, 3, 6, 8, 9, 2, 7, 1, 1, 7, 8, 5, 1]
+    expect(solutions.findDiagonalOrder(input).toString()).toBe(expected.toString())
+  })
+
+  test(`
+  Input:
+  [
+    [1, 2, 3, 3, 0, 1],
+    [4, 5, 6, 2, 1, 5],
+    [7, 8, 9, 7, 8, 1],
+    [1, 2, -1, 3, 7, 1],
+    [4, 5, 6, 0, 1, 5],
+    [7, 8, 9, 7, 8, 1]
+  ]
+
+  Output:  [1,2,4,7,5,3,3,6,8,1,4,2,9,2,0,1,1,7,-1,5,7,8,6,3,8,5,1,7,0,9,7,1,1,5,8,1]
+  `, () => {
+    let input = [
+      [1, 2, 3, 3, 0, 1],
+      [4, 5, 6, 2, 1, 5],
+      [7, 8, 9, 7, 8, 1],
+      [1, 2, -1, 3, 7, 1],
+      [4, 5, 6, 0, 1, 5],
+      [7, 8, 9, 7, 8, 1]
+    ]
+    let expected = [1,2,4,7,5,3,3,6,8,1,4,2,9,2,0,1,1,7,-1,5,7,8,6,3,8,5,1,7,0,9,7,1,1,5,8,1]
+    expect(solutions.findDiagonalOrder(input).toString()).toBe(expected.toString())
+  })
+})

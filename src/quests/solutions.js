@@ -15,6 +15,7 @@ const uniquePathsWithObstacles = require('./leetcode/uniquePathsWithObstacles')
 const regionsBySlashes = require('./leetcode/regionsBySlashes')
 const findMinDifference = require('./leetcode/findMinDifference')
 const repeatedSubstringPattern = require('./leetcode/repeatedSubstringPattern')
+const findDiagonalOrder = require('./leetcode/findDiagonalOrder')
 
 module.exports = {
   numJewelsInStones,
@@ -33,5 +34,6 @@ module.exports = {
   uniquePathsWithObstacles,
   regionsBySlashes,
   findMinDifference,
-  repeatedSubstringPattern
+  repeatedSubstringPattern,
+  findDiagonalOrder
 }
