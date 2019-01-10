@@ -14,6 +14,7 @@ const maxArea = require('./leetcode/maxArea')
 const uniquePathsWithObstacles = require('./leetcode/uniquePathsWithObstacles')
 const regionsBySlashes = require('./leetcode/regionsBySlashes')
 const findMinDifference = require('./leetcode/findMinDifference')
+const repeatedSubstringPattern = require('./leetcode/repeatedSubstringPattern')
 
 module.exports = {
   numJewelsInStones,
@@ -31,5 +32,6 @@ module.exports = {
   maxArea,
   uniquePathsWithObstacles,
   regionsBySlashes,
-  findMinDifference
+  findMinDifference,
+  repeatedSubstringPattern
 }
