@@ -444,3 +444,95 @@ Note: You may not slant the container and n is at least 2.
   })
 
 })
+
+describe(`
+==================================================================
+63. Unique Paths II
+Medium - https://leetcode.com/problems/unique-paths-ii/
+==================================================================
+A robot is located at the top-left corner of a m x n grid (marked 'Start' in the diagram below).
+The robot can only move either down or right at any point in time. The robot is trying to reach the bottom-right corner of the grid (marked 'Finish' in the diagram below).
+Now consider if some obstacles are added to the grids. How many unique paths would there be?
+`, () => {
+
+  test(`
+  Input:
+  [
+    [0,0,0],
+    [0,1,0],
+    [0,0,0]
+  ]
+  Output: 2
+  Explanation:
+  There is one obstacle in the middle of the 3x3 grid above.
+  There are two ways to reach the bottom-right corner:
+  1. Right -> Right -> Down -> Down
+  2. Down -> Down -> Right -> Right
+  `, () => {
+    let input = [
+      [0, 0, 0],
+      [0, 1, 0],
+      [0, 0, 0]
+    ]
+    expect(solutions.uniquePathsWithObstacles(input)).toBe(2)
+  })
+
+  test(`
+  Input:
+  [
+    [1]
+  ]
+  Output: 1
+  `, () => {
+    let input = [
+      [1]
+    ]
+    expect(solutions.uniquePathsWithObstacles(input)).toBe(0)
+  })
+
+  test(`
+  Input:
+  [
+    [0, 0, 0, 0, 0],
+    [0, 1, 0, 0, 0],
+    [0, 0, 0, 0, 0],
+    [0, 0, 1, 0, 0],
+    [0, 0, 0, 1, 0]
+  ]
+  Output: 11
+  `, () => {
+    let input = [
+      [0, 0, 0, 0, 0],
+      [0, 1, 0, 0, 0],
+      [0, 0, 0, 0, 0],
+      [0, 0, 1, 0, 0],
+      [0, 0, 0, 1, 0]
+    ]
+    expect(solutions.uniquePathsWithObstacles(input)).toBe(11)
+  })
+})
+
+describe(`
+==================================================================
+539. Minimum Time Difference
+Medium - https://leetcode.com/problems/minimum-time-difference/
+==================================================================
+Given a list of 24-hour clock time points in "Hour:Minutes" format, find the minimum minutes difference between any two time points in the list.
+`, () => {
+
+  test(`
+  Input: ["23:59","00:00"]
+  Output: 1
+  `, () => {
+    let input = ['23:59', '00:00']
+    expect(solutions.findMinDifference(input)).toBe(1)
+  })
+
+  test(`
+  Input: ["08:59", "11:30", "00:00", "20:13", "18:15", "05:07"]
+  Output: 118
+  `, () => {
+    let input = ['08:59', '11:30', '00:00', '20:13', '18:15', '05:07']
+    expect(solutions.findMinDifference(input)).toBe(118)
+  })
+})

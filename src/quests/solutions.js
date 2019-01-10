@@ -11,6 +11,9 @@ const islandPerimeter = require('./leetcode/islandPerimeter')
 const minMoves = require('./leetcode/minMoves')
 const findKthLargest = require('./leetcode/findKthLargest')
 const maxArea = require('./leetcode/maxArea')
+const uniquePathsWithObstacles = require('./leetcode/uniquePathsWithObstacles')
+const regionsBySlashes = require('./leetcode/regionsBySlashes')
+const findMinDifference = require('./leetcode/findMinDifference')
 
 module.exports = {
   numJewelsInStones,
@@ -25,5 +28,8 @@ module.exports = {
   islandPerimeter,
   minMoves,
   findKthLargest,
-  maxArea
+  maxArea,
+  uniquePathsWithObstacles,
+  regionsBySlashes,
+  findMinDifference
 }
