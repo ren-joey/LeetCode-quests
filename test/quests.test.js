@@ -655,3 +655,49 @@ Given a matrix of M x N elements (M rows, N columns), return all elements of the
     expect(solutions.findDiagonalOrder(input).toString()).toBe(expected.toString())
   })
 })
+
+describe(`
+==================================================================
+680. Valid Palindrome II
+Easy - https://leetcode.com/problems/valid-palindrome-ii/
+==================================================================
+Given a non-empty string s, you may delete at most one character.
+Judge whether you can make it a palindrome.
+`, () => {
+  test(`
+  Input: "aba"
+  Output: true
+  `, () => {
+    let input = 'aba'
+    let output = true
+    expect(solutions.validPalindrome(input)).toBe(output)
+  })
+
+  test(`
+  Input: "abcca"
+  Output: false
+  Explanation: You could delete the character 'c'.
+  `, () => {
+    let input = 'abca'
+    let output = true
+    expect(solutions.validPalindrome(input)).toBe(output)
+  })
+
+  test(`
+  Input: "aydmda"
+  Output: true
+  `, () => {
+    let input = 'aydmda'
+    let output = true
+    expect(solutions.validPalindrome(input)).toBe(output)
+  })
+
+  test(`
+  Input: ""aguokepatgbnvfqmgmlcupuufxoohdfpgjdmysgvhmvffcnqxjjxqncffvmhvgsymdjgpfdhooxfuupuculmgmqfvnbgtapekouga""
+  Output: true
+  `, () => {
+    let input = '"aguokepatgbnvfqmgmlcupuufxoohdfpgjdmysgvhmvffcnqxjjxqncffvmhvgsymdjgpfdhooxfuupuculmgmqfvnbgtapekouga"'
+    let output = true
+    expect(solutions.validPalindrome(input)).toBe(output)
+  })
+})
