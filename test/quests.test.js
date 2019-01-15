@@ -763,3 +763,39 @@ Judge whether you can make it a palindrome.
     expect(solutions.validPalindrome(input)).toBe(output)
   })
 })
+
+describe(`
+==================================================================
+191. Number of 1 Bits
+Easy - https://leetcode.com/problems/number-of-1-bits/
+==================================================================
+Write a function that takes an unsigned integer and return the number of '1' bits it has (also known as the Hamming weight).
+`, () => {
+  test(`
+  Input: 0b00000000000000000000000000001011
+  Output: 3
+  Explanation: The input binary string 00000000000000000000000000001011 has a total of three '1' bits.
+  `, () => {
+    let input = 0b00000000000000000000000000001011
+    let output = 3
+    expect(solutions.hammingWeight(input)).toBe(output)
+  })
+
+  test(`
+  Input: 0b00000000000000000000000010000000
+  Output: 1
+  `, () => {
+    let input = 0b00000000000000000000000010000000
+    let output = 1
+    expect(solutions.hammingWeight(input)).toBe(output)
+  })
+
+  test(`
+  Input: 0b11111111111111111111111111111101
+  Output: 31
+  `, () => {
+    let input = 0b11111111111111111111111111111101
+    let output = 31
+    expect(solutions.hammingWeight(input)).toBe(output)
+  })
+})
