@@ -1,7 +1,8 @@
 <h5 align="center">What is this?</h5>
 <h1 align="center">LeetCode 解題集</h1>
 
-題目擷取自 <a href="https://leetcode.com/problemset/all/">LeetCode</a> ，以 JS 整合成 local 端應用。
+題目擷取自 <a href="https://leetcode.com/problemset/all/">LeetCode</a> ，以 JS 整合成 local 端應用。<br/>
+<a href="https://gitlab.com/tsuyiren/code-quest">gitlab 連結</a>
 
 ## **主要架構**
 **JS Module**  依照項目編寫解題演算法
