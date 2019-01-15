@@ -37,5 +37,4 @@ var firstMissingPositive = function(nums) {
   }
   return expected
 }
-
 module.exports = firstMissingPositive

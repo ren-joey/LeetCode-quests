@@ -651,8 +651,70 @@ Given a matrix of M x N elements (M rows, N columns), return all elements of the
       [4, 5, 6, 0, 1, 5],
       [7, 8, 9, 7, 8, 1]
     ]
-    let expected = [1,2,4,7,5,3,3,6,8,1,4,2,9,2,0,1,1,7,-1,5,7,8,6,3,8,5,1,7,0,9,7,1,1,5,8,1]
+    let expected = [1, 2, 4, 7, 5, 3, 3, 6, 8, 1, 4, 2, 9, 2, 0, 1, 1, 7, -1, 5, 7, 8, 6, 3, 8, 5, 1, 7, 0, 9, 7, 1, 1, 5, 8, 1]
     expect(solutions.findDiagonalOrder(input).toString()).toBe(expected.toString())
+  })
+})
+
+describe(`
+==================================================================
+41. First Missing Positive
+Hard - https://leetcode.com/problems/first-missing-positive/
+==================================================================
+Given an unsorted integer array, find the smallest missing positive integer.
+`, () => {
+  test(`
+  Input: []
+  Output: 1
+  `, () => {
+    let input = []
+    let output = 1
+    expect(solutions.firstMissingPositive(input)).toBe(output)
+  })
+
+  test(`
+  Input: [2]
+  Output: 1
+  `, () => {
+    let input = [2]
+    let output = 1
+    expect(solutions.firstMissingPositive(input)).toBe(output)
+  })
+
+  test(`
+  Input: [0]
+  Output: 1
+  `, () => {
+    let input = [0]
+    let output = 1
+    expect(solutions.firstMissingPositive(input)).toBe(output)
+  })
+
+  test(`
+  Input: [3,4,-1,1]
+  Output: 2
+  `, () => {
+    let input = [3,4,-1,1,1]
+    let output = 2
+    expect(solutions.firstMissingPositive(input)).toBe(output)
+  })
+
+  test(`
+  Input: [0,2,2,1,1]
+  Output: 3
+  `, () => {
+    let input = [0,2,2,1,1]
+    let output = 3
+    expect(solutions.firstMissingPositive(input)).toBe(output)
+  })
+
+  test(`
+  Input: [7,8,9,11,12]
+  Output: 1
+  `, () => {
+    let input = [7,8,9,11,12]
+    let output = 1
+    expect(solutions.firstMissingPositive(input)).toBe(output)
   })
 })
 
@@ -693,10 +755,10 @@ Judge whether you can make it a palindrome.
   })
 
   test(`
-  Input: ""aguokepatgbnvfqmgmlcupuufxoohdfpgjdmysgvhmvffcnqxjjxqncffvmhvgsymdjgpfdhooxfuupuculmgmqfvnbgtapekouga""
+  Input: "aguokepatgbnvfqmgmlcupuufxoohdfpgjdmysgvhmvffcnqxjjxqncffvmhvgsymdjgpfdhooxfuupuculmgmqfvnbgtapekouga"
   Output: true
   `, () => {
-    let input = '"aguokepatgbnvfqmgmlcupuufxoohdfpgjdmysgvhmvffcnqxjjxqncffvmhvgsymdjgpfdhooxfuupuculmgmqfvnbgtapekouga"'
+    let input = 'aguokepatgbnvfqmgmlcupuufxoohdfpgjdmysgvhmvffcnqxjjxqncffvmhvgsymdjgpfdhooxfuupuculmgmqfvnbgtapekouga'
     let output = true
     expect(solutions.validPalindrome(input)).toBe(output)
   })
