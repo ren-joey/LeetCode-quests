@@ -717,3 +717,136 @@ Given an unsorted integer array, find the smallest missing positive integer.
     expect(solutions.firstMissingPositive(input)).toBe(output)
   })
 })
+
+describe(`
+==================================================================
+680. Valid Palindrome II
+Easy - https://leetcode.com/problems/valid-palindrome-ii/
+==================================================================
+Given a non-empty string s, you may delete at most one character.
+Judge whether you can make it a palindrome.
+`, () => {
+  test(`
+  Input: "aba"
+  Output: true
+  `, () => {
+    let input = 'aba'
+    let output = true
+    expect(solutions.validPalindrome(input)).toBe(output)
+  })
+
+  test(`
+  Input: "abcca"
+  Output: false
+  Explanation: You could delete the character 'c'.
+  `, () => {
+    let input = 'abca'
+    let output = true
+    expect(solutions.validPalindrome(input)).toBe(output)
+  })
+
+  test(`
+  Input: "aydmda"
+  Output: true
+  `, () => {
+    let input = 'aydmda'
+    let output = true
+    expect(solutions.validPalindrome(input)).toBe(output)
+  })
+
+  test(`
+  Input: "aguokepatgbnvfqmgmlcupuufxoohdfpgjdmysgvhmvffcnqxjjxqncffvmhvgsymdjgpfdhooxfuupuculmgmqfvnbgtapekouga"
+  Output: true
+  `, () => {
+    let input = 'aguokepatgbnvfqmgmlcupuufxoohdfpgjdmysgvhmvffcnqxjjxqncffvmhvgsymdjgpfdhooxfuupuculmgmqfvnbgtapekouga'
+    let output = true
+    expect(solutions.validPalindrome(input)).toBe(output)
+  })
+})
+
+describe(`
+==================================================================
+191. Number of 1 Bits
+Easy - https://leetcode.com/problems/number-of-1-bits/
+==================================================================
+Write a function that takes an unsigned integer and return the number of '1' bits it has (also known as the Hamming weight).
+`, () => {
+  test(`
+  Input: 0b00000000000000000000000000001011
+  Output: 3
+  Explanation: The input binary string 00000000000000000000000000001011 has a total of three '1' bits.
+  `, () => {
+    let input = 0b00000000000000000000000000001011
+    let output = 3
+    expect(solutions.hammingWeight(input)).toBe(output)
+  })
+
+  test(`
+  Input: 0b00000000000000000000000010000000
+  Output: 1
+  `, () => {
+    let input = 0b00000000000000000000000010000000
+    let output = 1
+    expect(solutions.hammingWeight(input)).toBe(output)
+  })
+
+  test(`
+  Input: 0b11111111111111111111111111111101
+  Output: 31
+  `, () => {
+    let input = 0b11111111111111111111111111111101
+    let output = 31
+    expect(solutions.hammingWeight(input)).toBe(output)
+  })
+})
+
+describe(`
+==================================================================
+55. Jump Game
+Medium - https://leetcode.com/problems/jump-game/
+==================================================================
+Given an array of non-negative integers, you are initially positioned at the first index of the array.
+Each element in the array represents your maximum jump length at that position.
+Determine if you are able to reach the last index.
+`, () => {
+
+  test(`
+  Input: [0]
+  Output: true
+  Explanation: Jump 1 step from index 0 to 1, then 3 steps to the last index.
+  `, () => {
+    let input = [0]
+    let output = true
+    expect(solutions.canJump(input)).toBe(output)
+  })
+
+  test(`
+  Input: [2,3,1,1,4]
+  Output: true
+  Explanation: Jump 1 step from index 0 to 1, then 3 steps to the last index.
+  `, () => {
+    let input = [2,3,1,1,4]
+    let output = true
+    expect(solutions.canJump(input)).toBe(output)
+  })
+
+  test(`
+  Input: [3,2,1,0,4]
+  Output: false
+  Explanation: You will always arrive at index 3 no matter what. Its maximum
+  jump length is 0, which makes it impossible to reach the last index.
+  `, () => {
+    let input = [3,2,1,0,4]
+    let output = false
+    expect(solutions.canJump(input)).toBe(output)
+  })
+
+  test(`
+  let input = [3,2,1,5,4,2,2,1,2,0,0,0]
+  let output = false
+  `, () => {
+    let input = [3,2,1,5,4,2,2,1,2,0,0,0]
+    let output = false
+    expect(solutions.canJump(input)).toBe(output)
+  })
+})

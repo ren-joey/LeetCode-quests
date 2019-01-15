@@ -18,6 +18,8 @@ const repeatedSubstringPattern = require('./leetcode/repeatedSubstringPattern')
 const findDiagonalOrder = require('./leetcode/findDiagonalOrder')
 const firstMissingPositive = require('./leetcode/firstMissingPositive')
 const canJump = require('./leetcode/canJump')
+const validPalindrome = require('./leetcode/validPalindrome')
+const hammingWeight = require('./leetcode/hammingWeight')
 
 module.exports = {
   numJewelsInStones,
@@ -39,5 +41,7 @@ module.exports = {
   repeatedSubstringPattern,
   findDiagonalOrder,
   firstMissingPositive,
-  canJump
+  canJump,
+  validPalindrome,
+  hammingWeight
 }
