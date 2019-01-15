@@ -17,6 +17,7 @@ const findMinDifference = require('./leetcode/findMinDifference')
 const repeatedSubstringPattern = require('./leetcode/repeatedSubstringPattern')
 const findDiagonalOrder = require('./leetcode/findDiagonalOrder')
 const firstMissingPositive = require('./leetcode/firstMissingPositive')
+const canJump = require('./leetcode/canJump')
 
 module.exports = {
   numJewelsInStones,
@@ -37,5 +38,6 @@ module.exports = {
   findMinDifference,
   repeatedSubstringPattern,
   findDiagonalOrder,
-  firstMissingPositive
+  firstMissingPositive,
+  canJump
 }
