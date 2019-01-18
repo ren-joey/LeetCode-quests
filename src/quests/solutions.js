@@ -20,6 +20,12 @@ const firstMissingPositive = require('./leetcode/firstMissingPositive')
 const canJump = require('./leetcode/canJump')
 const validPalindrome = require('./leetcode/validPalindrome')
 const hammingWeight = require('./leetcode/hammingWeight')
+const reorderedPowerOf2 = require('./leetcode/reorderedPowerOf2')
+const sortColors = require('./leetcode/sortColors')
+const lemonadeChange =require('./leetcode/lemonadeChange')
+const fib = require('./leetcode/fib')
+const deleteDuplicates = require('./leetcode/deleteDuplicates')
+const MyCircularDeque = require('./leetcode/MyCircularDeque')
 
 module.exports = {
   numJewelsInStones,
@@ -43,5 +49,11 @@ module.exports = {
   firstMissingPositive,
   canJump,
   validPalindrome,
-  hammingWeight
+  hammingWeight,
+  reorderedPowerOf2,
+  sortColors,
+  lemonadeChange,
+  fib,
+  deleteDuplicates,
+  MyCircularDeque
 }

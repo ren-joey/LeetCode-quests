@@ -850,3 +850,222 @@ Determine if you are able to reach the last index.
     expect(solutions.canJump(input)).toBe(output)
   })
 })
+
+describe(`
+==================================================================
+869. Reordered Power of 2
+Medium - https://leetcode.com/problems/reordered-power-of-2/
+==================================================================
+Starting with a positive integer N, we reorder the digits in any order (including the original order) such that the leading digit is not zero.
+Return true if and only if we can do this in a way such that the resulting number is a power of 2.
+`, () => {
+
+  test(`
+  Input: 1
+  Output: true
+  `, () => {
+    let input = 1
+    let output = true
+    expect(solutions.reorderedPowerOf2(input)).toBe(output)
+  })
+
+  test(`
+  Input: 10
+  Output: false
+  `, () => {
+    let input = 10
+    let output = false
+    expect(solutions.reorderedPowerOf2(input)).toBe(output)
+  })
+
+  test(`
+  Input: 46
+  Output: true
+  `, () => {
+    let input = 46
+    let output = true
+    expect(solutions.reorderedPowerOf2(input)).toBe(output)
+  })
+
+  test(`
+  Input:  4015678
+  Output: true
+  `, () => {
+    let input = 4015678
+    let output = true
+    expect(solutions.reorderedPowerOf2(input)).toBe(output)
+  })
+
+  test(`
+  Input: 4015668
+  Output: false
+  `, () => {
+    let input = 4015668
+    let output = false
+    expect(solutions.reorderedPowerOf2(input)).toBe(output)
+  })
+})
+
+describe(`
+==================================================================
+75. Sort Colors
+Medium - https://leetcode.com/problems/sort-colors/
+==================================================================
+Given an array with n objects colored red, white or blue, sort them in-place so that objects of the same color are adjacent, with the colors in the order red, white and blue.
+Here, we will use the integers 0, 1, and 2 to represent the color red, white, and blue respectively.
+Note: You are not suppose to use the library's sort function for this problem.
+`, () => {
+
+  test(`
+  input: [2,0,2,1,1,0]
+  output: [0,0,1,1,2,2]
+  `, () => {
+    let input = [2,0,2,1,1,0]
+    let output = [0,0,1,1,2,2]
+
+    solutions.sortColors(input)
+    expect(input.toString()).toBe(output.toString())
+  })
+})
+
+describe(`
+==================================================================
+860. Lemonade Change
+Easy - https://leetcode.com/problems/lemonade-change/
+==================================================================
+At a lemonade stand, each lemonade costs $5.
+Customers are standing in a queue to buy from you, and order one at a time (in the order specified by bills).
+Each customer will only buy one lemonade and pay with either a $5, $10, or $20 bill.  You must provide the correct change to each customer, so that the net transaction is that the customer pays $5.
+Note that you don't have any change in hand at first.
+Return true if and only if you can provide every customer with correct change.
+`, () => {
+
+  test(`
+  Input: [5,5,5,10,20]
+  Output: true
+  Explanation:
+  From the first 3 customers, we collect three $5 bills in order.
+  From the fourth customer, we collect a $10 bill and give back a $5.
+  From the fifth customer, we give a $10 bill and a $5 bill.
+  Since all customers got correct change, we output true.
+  `, () => {
+    let input = [5,5,5,10,20]
+    let output = true
+    expect(solutions.lemonadeChange(input)).toBe(output)
+  })
+
+  test(`
+  Input: [5,5,10]
+  Output: true
+  `, () => {
+    let input = [5,5,10]
+    let output = true
+    expect(solutions.lemonadeChange(input)).toBe(output)
+  })
+
+  test(`
+  Input: [10,10]
+  Output: false
+  `, () => {
+    let input = [10,10]
+    let output = false
+    expect(solutions.lemonadeChange(input)).toBe(output)
+  })
+
+  test(`
+  Input: [5,5,10,10,20]
+  Output: false
+  Explanation:
+  From the first two customers in order, we collect two $5 bills.
+  For the next two customers in order, we collect a $10 bill and give back a $5 bill.
+  For the last customer, we can't give change of $15 back because we only have two $10 bills.
+  Since not every customer received correct change, the answer is false.
+  `, () => {
+    let input = [5,5,10,10,20]
+    let output = false
+    expect(solutions.lemonadeChange(input)).toBe(output)
+  })
+})
+
+describe(`
+==================================================================
+509. Fibonacci Number
+Easy - https://leetcode.com/problems/fibonacci-number/
+==================================================================
+The Fibonacci numbers, commonly denoted F(n) form a sequence, called the Fibonacci sequence, such that each number is the sum of the two preceding ones, starting from 0 and 1. That is,
+`, () => {
+
+  test(`
+  Input: 2
+  Output: 1
+  Explanation: F(2) = F(1) + F(0) = 1 + 0 = 1.
+  `, () => {
+    let input = 2
+    let output = 1
+    expect(solutions.fib(input)).toBe(output)
+  })
+
+  test(`
+  Input: 4
+  Output: 3
+  Explanation: F(4) = F(3) + F(2) = 2 + 1 = 3.
+  `, () => {
+    let input = 4
+    let output = 3
+    expect(solutions.fib(input)).toBe(output)
+  })
+
+  test(`
+  Input: 30
+  Output: 832040
+  `, () => {
+    let input = 30
+    let output = 832040
+    expect(solutions.fib(input)).toBe(output)
+  })
+})
+
+describe(`
+==================================================================
+641. Design Circular Deque
+Medium - https://leetcode.com/problems/design-circular-deque/
+==================================================================
+Design your implementation of the circular double-ended queue (deque).
+Your implementation should support following operations:
+
+MyCircularDeque(k): Constructor, set the size of the deque to be k.
+insertFront(): Adds an item at the front of Deque. Return true if the operation is successful.
+insertLast(): Adds an item at the rear of Deque. Return true if the operation is successful.
+deleteFront(): Deletes an item from the front of Deque. Return true if the operation is successful.
+deleteLast(): Deletes an item from the rear of Deque. Return true if the operation is successful.
+getFront(): Gets the front item from the Deque. If the deque is empty, return -1.
+getRear(): Gets the last item from Deque. If the deque is empty, return -1.
+isEmpty(): Checks whether Deque is empty or not.
+isFull(): Checks whether Deque is full or not.
+`, () => {
+
+  test(`
+  MyCircularDeque circularDeque = new MycircularDeque(3); // set the size to be 3
+  circularDeque.insertLast(1);			// return true
+  circularDeque.insertLast(2);			// return true
+  circularDeque.insertFront(3);			// return true
+  circularDeque.insertFront(4);			// return false, the queue is full
+  circularDeque.getRear();  			// return 2
+  circularDeque.isFull();				// return true
+  circularDeque.deleteLast();			// return true
+  circularDeque.insertFront(4);			// return true
+  circularDeque.getFront();			// return 4
+  `, () => {
+    let input = 3
+    let circularDeque = new solutions.MyCircularDeque(input)
+    expect(circularDeque.insertLast(1)).toBeTruthy()
+    expect(circularDeque.insertLast(2)).toBeTruthy()
+    expect(circularDeque.insertFront(3)).toBeTruthy()
+    expect(circularDeque.insertFront(4)).toBeFalsy()
+    expect(circularDeque.getRear()).toBe(2)
+    expect(circularDeque.isFull()).toBeTruthy()
+    expect(circularDeque.deleteLast()).toBeTruthy()
+    expect(circularDeque.insertFront(4)).toBeTruthy()
+    expect(circularDeque.getFront()).toBe(4)
+  })
+})
