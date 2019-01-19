@@ -1069,3 +1069,64 @@ isFull(): Checks whether Deque is full or not.
     expect(circularDeque.getFront()).toBe(4)
   })
 })
+
+describe(`
+==================================================================
+704. Binary Search
+Easy - https://leetcode.com/problems/binary-search/
+==================================================================
+Given a sorted (in ascending order) integer array nums of n elements and a target value, write a function to search target in nums. If target exists, then return its index, otherwise return -1.
+`, () => {
+
+  test(`
+  Input: nums = [-1,0,3,5,9,12], target = 9
+  Output: 4
+  Explanation: 9 exists in nums and its index is 4
+  `, () => {
+    let input = [[-1,0,3,5,9,12], 9]
+    let output = 4
+    expect(solutions.search.apply(null, input)).toBe(output)
+  })
+
+  test(`
+  Input: nums = [-1,0,3,5,9,12], target = 2
+  Output: -1
+  Explanation: 2 does not exist in nums so return -1
+  `, () => {
+    let input = [[-1,0,3,5,9,12], 2]
+    let output = -1
+    expect(solutions.search.apply(null, input)).toBe(output)
+  })
+})
+
+describe(`
+==================================================================
+4. Median of Two Sorted Arrays
+Hard - https://leetcode.com/problems/median-of-two-sorted-arrays/
+==================================================================
+There are two sorted arrays nums1 and nums2 of size m and n respectively.
+Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).
+You may assume nums1 and nums2 cannot be both empty.
+`, () => {
+
+  test(`
+  nums1 = [1, 3]
+  nums2 = [2]
+  The median is 2.0
+  `, () => {
+    let input = [[1, 3], [2]]
+    let output = 2
+    expect(solutions.findMedianSortedArrays.apply(null, input)).toBe(output)
+  })
+
+  test(`
+  nums1 = [1, 2]
+  nums2 = [3, 4]
+  The median is (2 + 3)/2 = 2.5
+  `, () => {
+    let input = [[1, 2], [3, 4]]
+    let output = 2.5
+    expect(solutions.findMedianSortedArrays.apply(null, input)).toBe(output)
+  })
+})
+
