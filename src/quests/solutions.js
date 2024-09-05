@@ -28,6 +28,7 @@ const deleteDuplicates = require('./leetcode/deleteDuplicates')
 const MyCircularDeque = require('./leetcode/MyCircularDeque')
 const search = require('./leetcode/search')
 const findMedianSortedArrays = require('./leetcode/findMedianSortedArrays')
+const meetingRooms = require('./leetcode/meetingRooms')
 
 module.exports = {
   numJewelsInStones,
@@ -59,5 +60,6 @@ module.exports = {
   deleteDuplicates,
   MyCircularDeque,
   search,
-  findMedianSortedArrays
+  findMedianSortedArrays,
+  meetingRooms
 }
