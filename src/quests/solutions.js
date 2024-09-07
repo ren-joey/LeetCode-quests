@@ -29,6 +29,7 @@ const MyCircularDeque = require('./leetcode/MyCircularDeque')
 const search = require('./leetcode/search')
 const findMedianSortedArrays = require('./leetcode/findMedianSortedArrays')
 const meetingRooms = require('./leetcode/meetingRooms')
+const Trie = require('./leetcode/Trie')
 
 module.exports = {
   numJewelsInStones,
@@ -61,5 +62,6 @@ module.exports = {
   MyCircularDeque,
   search,
   findMedianSortedArrays,
-  meetingRooms
+  meetingRooms,
+  Trie
 }
