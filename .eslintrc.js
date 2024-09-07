@@ -17,7 +17,7 @@ module.exports = {
     "rules": {
         "indent": [
             "error",
-            2
+            4
         ],
         "linebreak-style": "off",
         "quotes": [
@@ -26,7 +26,7 @@ module.exports = {
         ],
         "semi": [
             "error",
-            "never"
+            "always"
         ]
         // "jest/no-disabled-tests": "warn",
         // "jest/no-focused-tests": "error",

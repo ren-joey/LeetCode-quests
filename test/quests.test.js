@@ -1,4 +1,4 @@
-const solutions = require('../src/quests/solutions')
+const solutions = require('../src/quests/solutions');
 
 describe(`
 ==================================================================
@@ -12,22 +12,22 @@ The letters in J are guaranteed distinct, and all characters in J and S are lett
 Letters are case sensitive, so "a" is considered a different type of stone from "A".
 `, () => {
 
-  test(`
+    test(`
   Input: J = "aA", S = "aAAbbbb"
   Output: 3`, () => {
-    let J = 'aA'
-    let S = 'aAAbbbb'
-    expect(solutions.numJewelsInStones(J, S)).toBe(3)
-  })
+        let J = 'aA';
+        let S = 'aAAbbbb';
+        expect(solutions.numJewelsInStones(J, S)).toBe(3);
+    });
 
-  test(`
+    test(`
   Input: J = "z", S = "ZZ"
   Output: 0`, () => {
-    let J = 'z'
-    let S = 'ZZ'
-    expect(solutions.numJewelsInStones(J, S)).toBe(0)
-  })
-})
+        let J = 'z';
+        let S = 'ZZ';
+        expect(solutions.numJewelsInStones(J, S)).toBe(0);
+    });
+});
 
 describe(`
 ==================================================================
@@ -48,15 +48,15 @@ It is possible to use both of these rules at the same time.
 
 Given a list of emails, we send one email to each address in the list.  How many different addresses actually receive mails? `, () => {
 
-  test(`
+    test(`
   Input: ["test.email+alex@leetcode.com","test.e.mail+bob.cathy@leetcode.com","testemail+david@lee.tcode.com"]
   Output: 2
   Explanation: "testemail@leetcode.com" and "testemail@lee.tcode.com" actually receive mails`, () => {
-    let emails = ['test.email+alex@leetcode.com', 'test.e.mail+bob.cathy@leetcode.com', 'testemail+david@lee.tcode.com']
-    expect(solutions.numUniqueEmails(emails)).toBe(2)
-  })
+        let emails = ['test.email+alex@leetcode.com', 'test.e.mail+bob.cathy@leetcode.com', 'testemail+david@lee.tcode.com'];
+        expect(solutions.numUniqueEmails(emails)).toBe(2);
+    });
 
-})
+});
 
 describe(`
 ==================================================================
@@ -68,29 +68,29 @@ Given a sorted array nums, remove the duplicates in-place such that each element
 Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
 `, () => {
 
-  test(`
+    test(`
   Given nums = [1,1,2],
 
   Your function should return length = 2, with the first two elements of nums being 1 and 2 respectively.
 
   It doesn't matter what you leave beyond the returned length.
   `, () => {
-    let nums = [1, 1, 2]
-    expect(solutions.removeDuplicates(nums)).toBe(2)
-  })
+        let nums = [1, 1, 2];
+        expect(solutions.removeDuplicates(nums)).toBe(2);
+    });
 
-  test(`
+    test(`
   Given nums = [0,0,1,1,1,2,2,3,3,4],
 
   Your function should return length = 5, with the first five elements of nums being modified to 0, 1, 2, 3, and 4 respectively.
 
   It doesn't matter what values are set beyond the returned length.
   `, () => {
-    let nums = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4]
-    expect(solutions.removeDuplicates(nums)).toBe(5)
-  })
+        let nums = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4];
+        expect(solutions.removeDuplicates(nums)).toBe(5);
+    });
 
-})
+});
 
 describe(`
 ==================================================================
@@ -102,35 +102,35 @@ Given two binary strings, return their sum (also a binary string).
 The input strings are both non-empty and contains only characters 1 or 0.
 `, () => {
 
-  test(`
+    test(`
   Input: a = "11", b = "1"
   Output: "100"
   `, () => {
-    let a = '11'
-    let b = '1'
-    expect(solutions.addBinary(a, b)).toBe('100')
-  })
+        let a = '11';
+        let b = '1';
+        expect(solutions.addBinary(a, b)).toBe('100');
+    });
 
-  test(`
+    test(`
   Input: a = "1010", b = "1011"
   Output: "10101"
   `, () => {
-    let a = '1010'
-    let b = '1011'
-    expect(solutions.addBinary(a, b)).toBe('10101')
-  })
+        let a = '1010';
+        let b = '1011';
+        expect(solutions.addBinary(a, b)).toBe('10101');
+    });
 
-  test(`
+    test(`
   Input: a = "110110101010101010101010101111110101010101010101010101110000101010101011011111110100000000000011111111111010",
   b = "1101101010101010101010101011111101010101010101010101011100001010101010110111111101010"
   Output: "110110101010101010101100011101001010101010101010110101011011010101010110001011010101010101011010111111100100"
   `, () => {
-    let a = '110110101010101010101010101111110101010101010101010101110000101010101011011111110100000000000011111111111010'
-    let b = '1101101010101010101010101011111101010101010101010101011100001010101010110111111101010'
-    expect(solutions.addBinary(a, b)).toBe('110110101010101010101100011101001010101010101010110101011011010101010110001011010101010101011010111111100100')
-  })
+        let a = '110110101010101010101010101111110101010101010101010101110000101010101011011111110100000000000011111111111010';
+        let b = '1101101010101010101010101011111101010101010101010101011100001010101010110111111101010';
+        expect(solutions.addBinary(a, b)).toBe('110110101010101010101100011101001010101010101010110101011011010101010110001011010101010101011010111111100100');
+    });
 
-})
+});
 
 describe(`
 ==================================================================
@@ -148,28 +148,28 @@ Return a list of the words in words that match the given pattern.
 You may return the answer in any order.
 `, () => {
 
-  test(`
+    test(`
   Input: words = ["abc","deq","mee","aqq","dkd","ccc"], pattern = "abb"
   Output: ["mee","aqq"]
   Explanation: "mee" matches the pattern because there is a permutation {a -> m, b -> e, ...}.
   "ccc" does not match the pattern because {a -> c, b -> c, ...} is not a permutation,
   since a and b map to the same letter.
   `, () => {
-    let words = ['abc', 'deq', 'mee', 'aqq', 'dkd', 'ccc']
-    let pattern = 'abb'
-    expect(solutions.findAndReplacePattern(words, pattern).toString()).toBe(['mee', 'aqq'].toString())
-  })
+        let words = ['abc', 'deq', 'mee', 'aqq', 'dkd', 'ccc'];
+        let pattern = 'abb';
+        expect(solutions.findAndReplacePattern(words, pattern).toString()).toBe(['mee', 'aqq'].toString());
+    });
 
-  test(`
+    test(`
   Input: words = ["acdd","deqq","meee","aaqq","ddkd","cccc"], pattern = "aaaa"
   Output: ["cccc"]
   `, () => {
-    let words = ['acdd', 'deqq', 'meee', 'aaqq', 'ddkd', 'cccc']
-    let pattern = 'aaaa'
-    expect(solutions.findAndReplacePattern(words, pattern).toString()).toBe(['cccc'].toString())
-  })
+        let words = ['acdd', 'deqq', 'meee', 'aaqq', 'ddkd', 'cccc'];
+        let pattern = 'aaaa';
+        expect(solutions.findAndReplacePattern(words, pattern).toString()).toBe(['cccc'].toString());
+    });
 
-})
+});
 
 describe(`
 ==================================================================
@@ -179,42 +179,42 @@ Medium - https://leetcode.com/problems/longest-substring-without-repeating-chara
 Given a string, find the length of the longest substring without repeating characters.
 `, () => {
 
-  test(`
+    test(`
   Input: "abcabcbb"
   Output: 3
   Explanation: The answer is "abc", with the length of 3.
   `, () => {
-    let input = 'abcabcbb'
-    expect(solutions.lengthOfLongestSubstring(input)).toBe(3)
-  })
+        let input = 'abcabcbb';
+        expect(solutions.lengthOfLongestSubstring(input)).toBe(3);
+    });
 
-  test(`
+    test(`
   Input: "bbbbb"
   Output: 1
   Explanation: The answer is "b", with the length of 1.
   `, () => {
-    let input = 'bbbbb'
-    expect(solutions.lengthOfLongestSubstring(input)).toBe(1)
-  })
+        let input = 'bbbbb';
+        expect(solutions.lengthOfLongestSubstring(input)).toBe(1);
+    });
 
-  test(`
+    test(`
   Input: "pwwkew"
   Output: 3
   Explanation: The answer is "wke", with the length of 3.
               Note that the answer must be a substring, "pwke" is a subsequence and not a substring.
   `, () => {
-    let input = 'pwwkew'
-    expect(solutions.lengthOfLongestSubstring(input)).toBe(3)
-  })
+        let input = 'pwwkew';
+        expect(solutions.lengthOfLongestSubstring(input)).toBe(3);
+    });
 
-  test(`
+    test(`
   Input: "qwksskwqskwqskwqskwqavcsewqawks"
   Output: 7
   `, () => {
-    let input = 'qwksskwqskwqskwqskwqavcsewqawks'
-    expect(solutions.lengthOfLongestSubstring(input)).toBe(8)
-  })
-})
+        let input = 'qwksskwqskwqskwqskwqavcsewqawks';
+        expect(solutions.lengthOfLongestSubstring(input)).toBe(8);
+    });
+});
 
 describe(`
 ==================================================================
@@ -228,7 +228,7 @@ Paste: You can paste the characters which are copied last time.
 Given a number n. You have to get exactly n 'A' on the notepad by performing the minimum number of steps permitted. Output the minimum number of steps to get n 'A'.
 `, () => {
 
-  test(`
+    test(`
   Input: 3
   Output: 3
   Explanation:
@@ -237,11 +237,11 @@ Given a number n. You have to get exactly n 'A' on the notepad by performing the
   In step 2, we use Paste operation to get 'AA'.
   In step 3, we use Paste operation to get 'AAA'.
   `, () => {
-    let input = 3
-    expect(solutions.minSteps(input)).toBe(3)
-  })
+        let input = 3;
+        expect(solutions.minSteps(input)).toBe(3);
+    });
 
-})
+});
 
 
 describe(`
@@ -252,25 +252,25 @@ Medium - https://leetcode.com/problems/summary-ranges/
 Given a sorted integer array without duplicates, return the summary of its ranges.
 `, () => {
 
-  test(`
+    test(`
   Input:  [0,1,2,4,5,7]
   Output: ["0->2","4->5","7"]
   Explanation: 0,1,2 form a continuous range; 4,5 form a continuous range.
   `, () => {
-    let input = [0, 1, 2, 4, 5, 7]
-    expect(solutions.summaryRanges(input).toString()).toBe(['0->2', '4->5', '7'].toString())
-  })
+        let input = [0, 1, 2, 4, 5, 7];
+        expect(solutions.summaryRanges(input).toString()).toBe(['0->2', '4->5', '7'].toString());
+    });
 
-  test(`
+    test(`
   Input:  [0,2,3,4,6,8,9]
   Output: ["0","2->4","6","8->9"]
   Explanation: 2,3,4 form a continuous range; 8,9 form a continuous range.
   `, () => {
-    let input = [0, 2, 3, 4, 6, 8, 9]
-    expect(solutions.summaryRanges(input).toString()).toBe(['0', '2->4', '6', '8->9'].toString())
-  })
+        let input = [0, 2, 3, 4, 6, 8, 9];
+        expect(solutions.summaryRanges(input).toString()).toBe(['0', '2->4', '6', '8->9'].toString());
+    });
 
-})
+});
 
 describe(`
 ==================================================================
@@ -286,28 +286,28 @@ Given a strictly increasing array A of positive integers forming a sequence, fin
 (Recall that a subsequence is derived from another sequence A by deleting any number of elements (including none) from A, without changing the order of the remaining elements.  For example, [3, 5, 8] is a subsequence of [3, 4, 5, 6, 7, 8].)
 `, () => {
 
-  test(`
+    test(`
   Input: [1,2,3,4,5,6,7,8]
   Output: 5
   Explanation:
   The longest subsequence that is fibonacci-like: [1,2,3,5,8].
   `, () => {
-    let input = [1, 2, 3, 4, 5, 6, 7, 8]
-    expect(solutions.lenLongestFibSubseq(input)).toBe(5)
-  })
+        let input = [1, 2, 3, 4, 5, 6, 7, 8];
+        expect(solutions.lenLongestFibSubseq(input)).toBe(5);
+    });
 
-  test(`
+    test(`
   Input: [1,3,7,11,12,14,18]
   Output: 3
   Explanation:
   The longest subsequence that is fibonacci-like:
   [1,11,12], [3,11,14] or [7,11,18].
   `, () => {
-    let input = [1, 3, 7, 11, 12, 14, 18]
-    expect(solutions.lenLongestFibSubseq(input)).toBe(3)
-  })
+        let input = [1, 3, 7, 11, 12, 14, 18];
+        expect(solutions.lenLongestFibSubseq(input)).toBe(3);
+    });
 
-})
+});
 
 describe(`
 ==================================================================
@@ -321,7 +321,7 @@ Grid cells are connected horizontally/vertically (not diagonally). The grid is c
 The island doesn't have "lakes" (water inside that isn't connected to the water around the island). One cell is a square with side length 1. The grid is rectangular, width and height don't exceed 100. Determine the perimeter of the island.
 `, () => {
 
-  test(`
+    test(`
   Input:
   [[0,1,0,0],
   [1,1,1,0],
@@ -330,16 +330,16 @@ The island doesn't have "lakes" (water inside that isn't connected to the water 
 
   Output: 16
   `, () => {
-    let input = [
-      [0, 1, 0, 0],
-      [1, 1, 1, 0],
-      [0, 1, 0, 0],
-      [1, 1, 0, 0]
-    ]
-    expect(solutions.islandPerimeter(input)).toBe(16)
-  })
+        let input = [
+            [0, 1, 0, 0],
+            [1, 1, 1, 0],
+            [0, 1, 0, 0],
+            [1, 1, 0, 0]
+        ];
+        expect(solutions.islandPerimeter(input)).toBe(16);
+    });
 
-  test(`
+    test(`
   Input:
   [
     [0,1,0,0,0],
@@ -351,17 +351,17 @@ The island doesn't have "lakes" (water inside that isn't connected to the water 
 
   Output: 28
   `, () => {
-    let input = [
-      [0, 1, 0, 0, 0],
-      [1, 1, 1, 1, 1],
-      [1, 1, 0, 0, 1],
-      [1, 1, 0, 0, 1],
-      [1, 1, 0, 1, 1]
-    ]
-    expect(solutions.islandPerimeter(input)).toBe(28)
-  })
+        let input = [
+            [0, 1, 0, 0, 0],
+            [1, 1, 1, 1, 1],
+            [1, 1, 0, 0, 1],
+            [1, 1, 0, 0, 1],
+            [1, 1, 0, 1, 1]
+        ];
+        expect(solutions.islandPerimeter(input)).toBe(28);
+    });
 
-})
+});
 
 describe(`
 ==================================================================
@@ -371,7 +371,7 @@ Easy - https://leetcode.com/problems/minimum-moves-to-equal-array-elements/
 Given a non-empty integer array of size n, find the minimum number of moves required to make all array elements equal, where a move is incrementing n - 1 elements by 1.
 `, () => {
 
-  test(`
+    test(`
   Input:
   [1,2,3]
 
@@ -383,11 +383,11 @@ Given a non-empty integer array of size n, find the minimum number of moves requ
 
   [1,2,3]  =>  [2,3,3]  =>  [3,4,3]  =>  [4,4,4]
   `, () => {
-    let input = [1, 2, 3]
-    expect(solutions.minMoves(input)).toBe(3)
-  })
+        let input = [1, 2, 3];
+        expect(solutions.minMoves(input)).toBe(3);
+    });
 
-})
+});
 
 describe(`
 ==================================================================
@@ -397,25 +397,25 @@ Medium - https://leetcode.com/problems/kth-largest-element-in-an-array/
 Find the kth largest element in an unsorted array. Note that it is the kth largest element in the sorted order, not the kth distinct element.
 `, () => {
 
-  test(`
+    test(`
   Input: [3,2,1,5,6,4] and k = 2
   Output: 5
   `, () => {
-    let input = [3, 2, 1, 5, 6, 4]
-    let k = 2
-    expect(solutions.findKthLargest(input, k)).toBe(5)
-  })
+        let input = [3, 2, 1, 5, 6, 4];
+        let k = 2;
+        expect(solutions.findKthLargest(input, k)).toBe(5);
+    });
 
-  test(`
+    test(`
   Input: [3,2,3,1,2,4,5,5,6] and k = 4
   Output: 4
   `, () => {
-    let input = [3, 2, 3, 1, 2, 4, 5, 5, 6]
-    let k = 4
-    expect(solutions.findKthLargest(input, k)).toBe(4)
-  })
+        let input = [3, 2, 3, 1, 2, 4, 5, 5, 6];
+        let k = 4;
+        expect(solutions.findKthLargest(input, k)).toBe(4);
+    });
 
-})
+});
 
 describe(`
 ==================================================================
@@ -427,23 +427,23 @@ Given n non-negative integers a1, a2, ..., an , where each represents a point at
 Note: You may not slant the container and n is at least 2.
 `, () => {
 
-  test(`
+    test(`
   Input: [1,8,6,2,5,4,8,3,7]
   Output: 49
   `, () => {
-    let input = [1, 8, 6, 2, 5, 4, 8, 3, 7]
-    expect(solutions.maxArea(input)).toBe(49)
-  })
+        let input = [1, 8, 6, 2, 5, 4, 8, 3, 7];
+        expect(solutions.maxArea(input)).toBe(49);
+    });
 
-  test(`
+    test(`
   Input: [9,8,6,2,5,4,8,2,7]
   Output: 56
   `, () => {
-    let input = [9, 8, 6, 2, 5, 4, 8, 2, 7]
-    expect(solutions.maxArea(input)).toBe(56)
-  })
+        let input = [9, 8, 6, 2, 5, 4, 8, 2, 7];
+        expect(solutions.maxArea(input)).toBe(56);
+    });
 
-})
+});
 
 describe(`
 ==================================================================
@@ -455,7 +455,7 @@ The robot can only move either down or right at any point in time. The robot is 
 Now consider if some obstacles are added to the grids. How many unique paths would there be?
 `, () => {
 
-  test(`
+    test(`
   Input:
   [
     [0,0,0],
@@ -469,28 +469,28 @@ Now consider if some obstacles are added to the grids. How many unique paths wou
   1. Right -> Right -> Down -> Down
   2. Down -> Down -> Right -> Right
   `, () => {
-    let input = [
-      [0, 0, 0],
-      [0, 1, 0],
-      [0, 0, 0]
-    ]
-    expect(solutions.uniquePathsWithObstacles(input)).toBe(2)
-  })
+        let input = [
+            [0, 0, 0],
+            [0, 1, 0],
+            [0, 0, 0]
+        ];
+        expect(solutions.uniquePathsWithObstacles(input)).toBe(2);
+    });
 
-  test(`
+    test(`
   Input:
   [
     [1]
   ]
   Output: 1
   `, () => {
-    let input = [
-      [1]
-    ]
-    expect(solutions.uniquePathsWithObstacles(input)).toBe(0)
-  })
+        let input = [
+            [1]
+        ];
+        expect(solutions.uniquePathsWithObstacles(input)).toBe(0);
+    });
 
-  test(`
+    test(`
   Input:
   [
     [0, 0, 0, 0, 0],
@@ -501,16 +501,16 @@ Now consider if some obstacles are added to the grids. How many unique paths wou
   ]
   Output: 11
   `, () => {
-    let input = [
-      [0, 0, 0, 0, 0],
-      [0, 1, 0, 0, 0],
-      [0, 0, 0, 0, 0],
-      [0, 0, 1, 0, 0],
-      [0, 0, 0, 1, 0]
-    ]
-    expect(solutions.uniquePathsWithObstacles(input)).toBe(11)
-  })
-})
+        let input = [
+            [0, 0, 0, 0, 0],
+            [0, 1, 0, 0, 0],
+            [0, 0, 0, 0, 0],
+            [0, 0, 1, 0, 0],
+            [0, 0, 0, 1, 0]
+        ];
+        expect(solutions.uniquePathsWithObstacles(input)).toBe(11);
+    });
+});
 
 describe(`
 ==================================================================
@@ -520,22 +520,22 @@ Medium - https://leetcode.com/problems/minimum-time-difference/
 Given a list of 24-hour clock time points in "Hour:Minutes" format, find the minimum minutes difference between any two time points in the list.
 `, () => {
 
-  test(`
+    test(`
   Input: ["23:59","00:00"]
   Output: 1
   `, () => {
-    let input = ['23:59', '00:00']
-    expect(solutions.findMinDifference(input)).toBe(1)
-  })
+        let input = ['23:59', '00:00'];
+        expect(solutions.findMinDifference(input)).toBe(1);
+    });
 
-  test(`
+    test(`
   Input: ["08:59", "11:30", "00:00", "20:13", "18:15", "05:07"]
   Output: 118
   `, () => {
-    let input = ['08:59', '11:30', '00:00', '20:13', '18:15', '05:07']
-    expect(solutions.findMinDifference(input)).toBe(118)
-  })
-})
+        let input = ['08:59', '11:30', '00:00', '20:13', '18:15', '05:07'];
+        expect(solutions.findMinDifference(input)).toBe(118);
+    });
+});
 
 describe(`
 ==================================================================
@@ -546,32 +546,32 @@ Given a non-empty string check if it can be constructed by taking a substring of
 You may assume the given string consists of lowercase English letters only and its length will not exceed 10000.
 `, () => {
 
-  test(`
+    test(`
   Input: "abab"
   Output: True
   Explanation: It's the substring "ab" twice.
   `, () => {
-    let input = 'abab'
-    expect(solutions.repeatedSubstringPattern(input)).toBeTruthy()
-  })
+        let input = 'abab';
+        expect(solutions.repeatedSubstringPattern(input)).toBeTruthy();
+    });
 
-  test(`
+    test(`
   Input: "aba"
   Output: False
   `, () => {
-    let input = 'aba'
-    expect(solutions.repeatedSubstringPattern(input)).toBeFalsy()
-  })
+        let input = 'aba';
+        expect(solutions.repeatedSubstringPattern(input)).toBeFalsy();
+    });
 
-  test(`
+    test(`
   Input: "abcabcabcabc"
   Output: True
   Explanation: It's the substring "abc" four times. (And the substring "abcabc" twice.)
   `, () => {
-    let input = 'abcabcabcabc'
-    expect(solutions.repeatedSubstringPattern(input)).toBeTruthy()
-  })
-})
+        let input = 'abcabcabcabc';
+        expect(solutions.repeatedSubstringPattern(input)).toBeTruthy();
+    });
+});
 
 describe(`
 ==================================================================
@@ -581,18 +581,18 @@ Medium - https://leetcode.com/problems/diagonal-traverse/
 Given a matrix of M x N elements (M rows, N columns), return all elements of the matrix in diagonal order as shown in the below image.
 `, () => {
 
-  test(`
+    test(`
   Input:
   []
 
   Output:  []
   `, () => {
-    let input = []
-    let expected = []
-    expect(solutions.findDiagonalOrder(input).length).toBe(expected.length)
-  })
+        let input = [];
+        let expected = [];
+        expect(solutions.findDiagonalOrder(input).length).toBe(expected.length);
+    });
 
-  test(`
+    test(`
   Input:
   [
   [ 1, 2, 3 ],
@@ -602,16 +602,16 @@ Given a matrix of M x N elements (M rows, N columns), return all elements of the
 
   Output:  [1,2,4,7,5,3,6,8,9]
   `, () => {
-    let input = [
-      [1, 2, 3],
-      [4, 5, 6],
-      [7, 8, 9]
-    ]
-    let expected = [1, 2, 4, 7, 5, 3, 6, 8, 9]
-    expect(solutions.findDiagonalOrder(input).toString()).toBe(expected.toString())
-  })
+        let input = [
+            [1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 9]
+        ];
+        let expected = [1, 2, 4, 7, 5, 3, 6, 8, 9];
+        expect(solutions.findDiagonalOrder(input).toString()).toBe(expected.toString());
+    });
 
-  test(`
+    test(`
   Input:
   [
     [1, 2, 3, 3, 7, 1],
@@ -621,16 +621,16 @@ Given a matrix of M x N elements (M rows, N columns), return all elements of the
 
   Output:  [1, 2, 4, 7, 5, 3, 3, 6, 8, 9, 2, 7, 1, 1, 7, 8, 5, 1]
   `, () => {
-    let input = [
-      [1, 2, 3, 3, 7, 1],
-      [4, 5, 6, 2, 1, 5],
-      [7, 8, 9, 7, 8, 1]
-    ]
-    let expected = [1, 2, 4, 7, 5, 3, 3, 6, 8, 9, 2, 7, 1, 1, 7, 8, 5, 1]
-    expect(solutions.findDiagonalOrder(input).toString()).toBe(expected.toString())
-  })
+        let input = [
+            [1, 2, 3, 3, 7, 1],
+            [4, 5, 6, 2, 1, 5],
+            [7, 8, 9, 7, 8, 1]
+        ];
+        let expected = [1, 2, 4, 7, 5, 3, 3, 6, 8, 9, 2, 7, 1, 1, 7, 8, 5, 1];
+        expect(solutions.findDiagonalOrder(input).toString()).toBe(expected.toString());
+    });
 
-  test(`
+    test(`
   Input:
   [
     [1, 2, 3, 3, 0, 1],
@@ -643,18 +643,18 @@ Given a matrix of M x N elements (M rows, N columns), return all elements of the
 
   Output:  [1,2,4,7,5,3,3,6,8,1,4,2,9,2,0,1,1,7,-1,5,7,8,6,3,8,5,1,7,0,9,7,1,1,5,8,1]
   `, () => {
-    let input = [
-      [1, 2, 3, 3, 0, 1],
-      [4, 5, 6, 2, 1, 5],
-      [7, 8, 9, 7, 8, 1],
-      [1, 2, -1, 3, 7, 1],
-      [4, 5, 6, 0, 1, 5],
-      [7, 8, 9, 7, 8, 1]
-    ]
-    let expected = [1, 2, 4, 7, 5, 3, 3, 6, 8, 1, 4, 2, 9, 2, 0, 1, 1, 7, -1, 5, 7, 8, 6, 3, 8, 5, 1, 7, 0, 9, 7, 1, 1, 5, 8, 1]
-    expect(solutions.findDiagonalOrder(input).toString()).toBe(expected.toString())
-  })
-})
+        let input = [
+            [1, 2, 3, 3, 0, 1],
+            [4, 5, 6, 2, 1, 5],
+            [7, 8, 9, 7, 8, 1],
+            [1, 2, -1, 3, 7, 1],
+            [4, 5, 6, 0, 1, 5],
+            [7, 8, 9, 7, 8, 1]
+        ];
+        let expected = [1, 2, 4, 7, 5, 3, 3, 6, 8, 1, 4, 2, 9, 2, 0, 1, 1, 7, -1, 5, 7, 8, 6, 3, 8, 5, 1, 7, 0, 9, 7, 1, 1, 5, 8, 1];
+        expect(solutions.findDiagonalOrder(input).toString()).toBe(expected.toString());
+    });
+});
 
 describe(`
 ==================================================================
@@ -663,60 +663,60 @@ Hard - https://leetcode.com/problems/first-missing-positive/
 ==================================================================
 Given an unsorted integer array, find the smallest missing positive integer.
 `, () => {
-  test(`
+    test(`
   Input: []
   Output: 1
   `, () => {
-    let input = []
-    let output = 1
-    expect(solutions.firstMissingPositive(input)).toBe(output)
-  })
+        let input = [];
+        let output = 1;
+        expect(solutions.firstMissingPositive(input)).toBe(output);
+    });
 
-  test(`
+    test(`
   Input: [2]
   Output: 1
   `, () => {
-    let input = [2]
-    let output = 1
-    expect(solutions.firstMissingPositive(input)).toBe(output)
-  })
+        let input = [2];
+        let output = 1;
+        expect(solutions.firstMissingPositive(input)).toBe(output);
+    });
 
-  test(`
+    test(`
   Input: [0]
   Output: 1
   `, () => {
-    let input = [0]
-    let output = 1
-    expect(solutions.firstMissingPositive(input)).toBe(output)
-  })
+        let input = [0];
+        let output = 1;
+        expect(solutions.firstMissingPositive(input)).toBe(output);
+    });
 
-  test(`
+    test(`
   Input: [3,4,-1,1]
   Output: 2
   `, () => {
-    let input = [3,4,-1,1,1]
-    let output = 2
-    expect(solutions.firstMissingPositive(input)).toBe(output)
-  })
+        let input = [3,4,-1,1,1];
+        let output = 2;
+        expect(solutions.firstMissingPositive(input)).toBe(output);
+    });
 
-  test(`
+    test(`
   Input: [0,2,2,1,1]
   Output: 3
   `, () => {
-    let input = [0,2,2,1,1]
-    let output = 3
-    expect(solutions.firstMissingPositive(input)).toBe(output)
-  })
+        let input = [0,2,2,1,1];
+        let output = 3;
+        expect(solutions.firstMissingPositive(input)).toBe(output);
+    });
 
-  test(`
+    test(`
   Input: [7,8,9,11,12]
   Output: 1
   `, () => {
-    let input = [7,8,9,11,12]
-    let output = 1
-    expect(solutions.firstMissingPositive(input)).toBe(output)
-  })
-})
+        let input = [7,8,9,11,12];
+        let output = 1;
+        expect(solutions.firstMissingPositive(input)).toBe(output);
+    });
+});
 
 describe(`
 ==================================================================
@@ -726,43 +726,43 @@ Easy - https://leetcode.com/problems/valid-palindrome-ii/
 Given a non-empty string s, you may delete at most one character.
 Judge whether you can make it a palindrome.
 `, () => {
-  test(`
+    test(`
   Input: "aba"
   Output: true
   `, () => {
-    let input = 'aba'
-    let output = true
-    expect(solutions.validPalindrome(input)).toBe(output)
-  })
+        let input = 'aba';
+        let output = true;
+        expect(solutions.validPalindrome(input)).toBe(output);
+    });
 
-  test(`
+    test(`
   Input: "abcca"
   Output: false
   Explanation: You could delete the character 'c'.
   `, () => {
-    let input = 'abca'
-    let output = true
-    expect(solutions.validPalindrome(input)).toBe(output)
-  })
+        let input = 'abca';
+        let output = true;
+        expect(solutions.validPalindrome(input)).toBe(output);
+    });
 
-  test(`
+    test(`
   Input: "aydmda"
   Output: true
   `, () => {
-    let input = 'aydmda'
-    let output = true
-    expect(solutions.validPalindrome(input)).toBe(output)
-  })
+        let input = 'aydmda';
+        let output = true;
+        expect(solutions.validPalindrome(input)).toBe(output);
+    });
 
-  test(`
+    test(`
   Input: "aguokepatgbnvfqmgmlcupuufxoohdfpgjdmysgvhmvffcnqxjjxqncffvmhvgsymdjgpfdhooxfuupuculmgmqfvnbgtapekouga"
   Output: true
   `, () => {
-    let input = 'aguokepatgbnvfqmgmlcupuufxoohdfpgjdmysgvhmvffcnqxjjxqncffvmhvgsymdjgpfdhooxfuupuculmgmqfvnbgtapekouga'
-    let output = true
-    expect(solutions.validPalindrome(input)).toBe(output)
-  })
-})
+        let input = 'aguokepatgbnvfqmgmlcupuufxoohdfpgjdmysgvhmvffcnqxjjxqncffvmhvgsymdjgpfdhooxfuupuculmgmqfvnbgtapekouga';
+        let output = true;
+        expect(solutions.validPalindrome(input)).toBe(output);
+    });
+});
 
 describe(`
 ==================================================================
@@ -771,34 +771,34 @@ Easy - https://leetcode.com/problems/number-of-1-bits/
 ==================================================================
 Write a function that takes an unsigned integer and return the number of '1' bits it has (also known as the Hamming weight).
 `, () => {
-  test(`
+    test(`
   Input: 0b00000000000000000000000000001011
   Output: 3
   Explanation: The input binary string 00000000000000000000000000001011 has a total of three '1' bits.
   `, () => {
-    let input = 0b00000000000000000000000000001011
-    let output = 3
-    expect(solutions.hammingWeight(input)).toBe(output)
-  })
+        let input = 0b00000000000000000000000000001011;
+        let output = 3;
+        expect(solutions.hammingWeight(input)).toBe(output);
+    });
 
-  test(`
+    test(`
   Input: 0b00000000000000000000000010000000
   Output: 1
   `, () => {
-    let input = 0b00000000000000000000000010000000
-    let output = 1
-    expect(solutions.hammingWeight(input)).toBe(output)
-  })
+        let input = 0b00000000000000000000000010000000;
+        let output = 1;
+        expect(solutions.hammingWeight(input)).toBe(output);
+    });
 
-  test(`
+    test(`
   Input: 0b11111111111111111111111111111101
   Output: 31
   `, () => {
-    let input = 0b11111111111111111111111111111101
-    let output = 31
-    expect(solutions.hammingWeight(input)).toBe(output)
-  })
-})
+        let input = 0b11111111111111111111111111111101;
+        let output = 31;
+        expect(solutions.hammingWeight(input)).toBe(output);
+    });
+});
 
 describe(`
 ==================================================================
@@ -810,46 +810,46 @@ Each element in the array represents your maximum jump length at that position.
 Determine if you are able to reach the last index.
 `, () => {
 
-  test(`
+    test(`
   Input: [0]
   Output: true
   Explanation: Jump 1 step from index 0 to 1, then 3 steps to the last index.
   `, () => {
-    let input = [0]
-    let output = true
-    expect(solutions.canJump(input)).toBe(output)
-  })
+        let input = [0];
+        let output = true;
+        expect(solutions.canJump(input)).toBe(output);
+    });
 
-  test(`
+    test(`
   Input: [2,3,1,1,4]
   Output: true
   Explanation: Jump 1 step from index 0 to 1, then 3 steps to the last index.
   `, () => {
-    let input = [2,3,1,1,4]
-    let output = true
-    expect(solutions.canJump(input)).toBe(output)
-  })
+        let input = [2,3,1,1,4];
+        let output = true;
+        expect(solutions.canJump(input)).toBe(output);
+    });
 
-  test(`
+    test(`
   Input: [3,2,1,0,4]
   Output: false
   Explanation: You will always arrive at index 3 no matter what. Its maximum
   jump length is 0, which makes it impossible to reach the last index.
   `, () => {
-    let input = [3,2,1,0,4]
-    let output = false
-    expect(solutions.canJump(input)).toBe(output)
-  })
+        let input = [3,2,1,0,4];
+        let output = false;
+        expect(solutions.canJump(input)).toBe(output);
+    });
 
-  test(`
+    test(`
   let input = [3,2,1,5,4,2,2,1,2,0,0,0]
   let output = false
   `, () => {
-    let input = [3,2,1,5,4,2,2,1,2,0,0,0]
-    let output = false
-    expect(solutions.canJump(input)).toBe(output)
-  })
-})
+        let input = [3,2,1,5,4,2,2,1,2,0,0,0];
+        let output = false;
+        expect(solutions.canJump(input)).toBe(output);
+    });
+});
 
 describe(`
 ==================================================================
@@ -860,51 +860,51 @@ Starting with a positive integer N, we reorder the digits in any order (includin
 Return true if and only if we can do this in a way such that the resulting number is a power of 2.
 `, () => {
 
-  test(`
+    test(`
   Input: 1
   Output: true
   `, () => {
-    let input = 1
-    let output = true
-    expect(solutions.reorderedPowerOf2(input)).toBe(output)
-  })
+        let input = 1;
+        let output = true;
+        expect(solutions.reorderedPowerOf2(input)).toBe(output);
+    });
 
-  test(`
+    test(`
   Input: 10
   Output: false
   `, () => {
-    let input = 10
-    let output = false
-    expect(solutions.reorderedPowerOf2(input)).toBe(output)
-  })
+        let input = 10;
+        let output = false;
+        expect(solutions.reorderedPowerOf2(input)).toBe(output);
+    });
 
-  test(`
+    test(`
   Input: 46
   Output: true
   `, () => {
-    let input = 46
-    let output = true
-    expect(solutions.reorderedPowerOf2(input)).toBe(output)
-  })
+        let input = 46;
+        let output = true;
+        expect(solutions.reorderedPowerOf2(input)).toBe(output);
+    });
 
-  test(`
+    test(`
   Input:  4015678
   Output: true
   `, () => {
-    let input = 4015678
-    let output = true
-    expect(solutions.reorderedPowerOf2(input)).toBe(output)
-  })
+        let input = 4015678;
+        let output = true;
+        expect(solutions.reorderedPowerOf2(input)).toBe(output);
+    });
 
-  test(`
+    test(`
   Input: 4015668
   Output: false
   `, () => {
-    let input = 4015668
-    let output = false
-    expect(solutions.reorderedPowerOf2(input)).toBe(output)
-  })
-})
+        let input = 4015668;
+        let output = false;
+        expect(solutions.reorderedPowerOf2(input)).toBe(output);
+    });
+});
 
 describe(`
 ==================================================================
@@ -916,17 +916,17 @@ Here, we will use the integers 0, 1, and 2 to represent the color red, white, an
 Note: You are not suppose to use the library's sort function for this problem.
 `, () => {
 
-  test(`
+    test(`
   input: [2,0,2,1,1,0]
   output: [0,0,1,1,2,2]
   `, () => {
-    let input = [2,0,2,1,1,0]
-    let output = [0,0,1,1,2,2]
+        let input = [2,0,2,1,1,0];
+        let output = [0,0,1,1,2,2];
 
-    solutions.sortColors(input)
-    expect(input.toString()).toBe(output.toString())
-  })
-})
+        solutions.sortColors(input);
+        expect(input.toString()).toBe(output.toString());
+    });
+});
 
 describe(`
 ==================================================================
@@ -940,7 +940,7 @@ Note that you don't have any change in hand at first.
 Return true if and only if you can provide every customer with correct change.
 `, () => {
 
-  test(`
+    test(`
   Input: [5,5,5,10,20]
   Output: true
   Explanation:
@@ -949,30 +949,30 @@ Return true if and only if you can provide every customer with correct change.
   From the fifth customer, we give a $10 bill and a $5 bill.
   Since all customers got correct change, we output true.
   `, () => {
-    let input = [5,5,5,10,20]
-    let output = true
-    expect(solutions.lemonadeChange(input)).toBe(output)
-  })
+        let input = [5,5,5,10,20];
+        let output = true;
+        expect(solutions.lemonadeChange(input)).toBe(output);
+    });
 
-  test(`
+    test(`
   Input: [5,5,10]
   Output: true
   `, () => {
-    let input = [5,5,10]
-    let output = true
-    expect(solutions.lemonadeChange(input)).toBe(output)
-  })
+        let input = [5,5,10];
+        let output = true;
+        expect(solutions.lemonadeChange(input)).toBe(output);
+    });
 
-  test(`
+    test(`
   Input: [10,10]
   Output: false
   `, () => {
-    let input = [10,10]
-    let output = false
-    expect(solutions.lemonadeChange(input)).toBe(output)
-  })
+        let input = [10,10];
+        let output = false;
+        expect(solutions.lemonadeChange(input)).toBe(output);
+    });
 
-  test(`
+    test(`
   Input: [5,5,10,10,20]
   Output: false
   Explanation:
@@ -981,11 +981,11 @@ Return true if and only if you can provide every customer with correct change.
   For the last customer, we can't give change of $15 back because we only have two $10 bills.
   Since not every customer received correct change, the answer is false.
   `, () => {
-    let input = [5,5,10,10,20]
-    let output = false
-    expect(solutions.lemonadeChange(input)).toBe(output)
-  })
-})
+        let input = [5,5,10,10,20];
+        let output = false;
+        expect(solutions.lemonadeChange(input)).toBe(output);
+    });
+});
 
 describe(`
 ==================================================================
@@ -995,35 +995,35 @@ Easy - https://leetcode.com/problems/fibonacci-number/
 The Fibonacci numbers, commonly denoted F(n) form a sequence, called the Fibonacci sequence, such that each number is the sum of the two preceding ones, starting from 0 and 1. That is,
 `, () => {
 
-  test(`
+    test(`
   Input: 2
   Output: 1
   Explanation: F(2) = F(1) + F(0) = 1 + 0 = 1.
   `, () => {
-    let input = 2
-    let output = 1
-    expect(solutions.fib(input)).toBe(output)
-  })
+        let input = 2;
+        let output = 1;
+        expect(solutions.fib(input)).toBe(output);
+    });
 
-  test(`
+    test(`
   Input: 4
   Output: 3
   Explanation: F(4) = F(3) + F(2) = 2 + 1 = 3.
   `, () => {
-    let input = 4
-    let output = 3
-    expect(solutions.fib(input)).toBe(output)
-  })
+        let input = 4;
+        let output = 3;
+        expect(solutions.fib(input)).toBe(output);
+    });
 
-  test(`
+    test(`
   Input: 30
   Output: 832040
   `, () => {
-    let input = 30
-    let output = 832040
-    expect(solutions.fib(input)).toBe(output)
-  })
-})
+        let input = 30;
+        let output = 832040;
+        expect(solutions.fib(input)).toBe(output);
+    });
+});
 
 describe(`
 ==================================================================
@@ -1044,7 +1044,7 @@ isEmpty(): Checks whether Deque is empty or not.
 isFull(): Checks whether Deque is full or not.
 `, () => {
 
-  test(`
+    test(`
   MyCircularDeque circularDeque = new MycircularDeque(3); // set the size to be 3
   circularDeque.insertLast(1);			// return true
   circularDeque.insertLast(2);			// return true
@@ -1056,19 +1056,19 @@ isFull(): Checks whether Deque is full or not.
   circularDeque.insertFront(4);			// return true
   circularDeque.getFront();			// return 4
   `, () => {
-    let input = 3
-    let circularDeque = new solutions.MyCircularDeque(input)
-    expect(circularDeque.insertLast(1)).toBeTruthy()
-    expect(circularDeque.insertLast(2)).toBeTruthy()
-    expect(circularDeque.insertFront(3)).toBeTruthy()
-    expect(circularDeque.insertFront(4)).toBeFalsy()
-    expect(circularDeque.getRear()).toBe(2)
-    expect(circularDeque.isFull()).toBeTruthy()
-    expect(circularDeque.deleteLast()).toBeTruthy()
-    expect(circularDeque.insertFront(4)).toBeTruthy()
-    expect(circularDeque.getFront()).toBe(4)
-  })
-})
+        let input = 3;
+        let circularDeque = new solutions.MyCircularDeque(input);
+        expect(circularDeque.insertLast(1)).toBeTruthy();
+        expect(circularDeque.insertLast(2)).toBeTruthy();
+        expect(circularDeque.insertFront(3)).toBeTruthy();
+        expect(circularDeque.insertFront(4)).toBeFalsy();
+        expect(circularDeque.getRear()).toBe(2);
+        expect(circularDeque.isFull()).toBeTruthy();
+        expect(circularDeque.deleteLast()).toBeTruthy();
+        expect(circularDeque.insertFront(4)).toBeTruthy();
+        expect(circularDeque.getFront()).toBe(4);
+    });
+});
 
 describe(`
 ==================================================================
@@ -1078,26 +1078,26 @@ Easy - https://leetcode.com/problems/binary-search/
 Given a sorted (in ascending order) integer array nums of n elements and a target value, write a function to search target in nums. If target exists, then return its index, otherwise return -1.
 `, () => {
 
-  test(`
+    test(`
   Input: nums = [-1,0,3,5,9,12], target = 9
   Output: 4
   Explanation: 9 exists in nums and its index is 4
   `, () => {
-    let input = [[-1,0,3,5,9,12], 9]
-    let output = 4
-    expect(solutions.search.apply(null, input)).toBe(output)
-  })
+        let input = [[-1,0,3,5,9,12], 9];
+        let output = 4;
+        expect(solutions.search.apply(null, input)).toBe(output);
+    });
 
-  test(`
+    test(`
   Input: nums = [-1,0,3,5,9,12], target = 2
   Output: -1
   Explanation: 2 does not exist in nums so return -1
   `, () => {
-    let input = [[-1,0,3,5,9,12], 2]
-    let output = -1
-    expect(solutions.search.apply(null, input)).toBe(output)
-  })
-})
+        let input = [[-1,0,3,5,9,12], 2];
+        let output = -1;
+        expect(solutions.search.apply(null, input)).toBe(output);
+    });
+});
 
 describe(`
 ==================================================================
@@ -1109,24 +1109,24 @@ Find the median of the two sorted arrays. The overall run time complexity should
 You may assume nums1 and nums2 cannot be both empty.
 `, () => {
 
-  test(`
+    test(`
   nums1 = [1, 3]
   nums2 = [2]
   The median is 2.0
   `, () => {
-    let input = [[1, 3], [2]]
-    let output = 2
-    expect(solutions.findMedianSortedArrays.apply(null, input)).toBe(output)
-  })
+        let input = [[1, 3], [2]];
+        let output = 2;
+        expect(solutions.findMedianSortedArrays.apply(null, input)).toBe(output);
+    });
 
-  test(`
+    test(`
   nums1 = [1, 2]
   nums2 = [3, 4]
   The median is (2 + 3)/2 = 2.5
   `, () => {
-    let input = [[1, 2], [3, 4]]
-    let output = 2.5
-    expect(solutions.findMedianSortedArrays.apply(null, input)).toBe(output)
-  })
-})
+        let input = [[1, 2], [3, 4]];
+        let output = 2.5;
+        expect(solutions.findMedianSortedArrays.apply(null, input)).toBe(output);
+    });
+});
 

@@ -3,7 +3,7 @@
  * @param {string[]} grid
  * @return {number}
  */
-var regionsBySlashes = function(grid) {
+var regionsBySlashes = function() {
 
-}
-module.exports = regionsBySlashes
+};
+module.exports = regionsBySlashes;

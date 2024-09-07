@@ -11,34 +11,34 @@
  * @return {ListNode}
  */
 var mergeTwoLists = function (l1, l2) {
-  let res = new ListNode(0)
-  let current = res
+    let res = new ListNode(0);
+    let current = res;
 
-  while (l1 || l2) {
-    if (!l2) {
-      current.next = new ListNode(l1.val)
-      l1 = l1.next
-    } else if (!l1) {
-      current.next = new ListNode(l2.val)
-      l2 = l2.next
-    } else if (l1.val > l2.val) {
-      current.next = new ListNode(l2.val)
-      l2 = l2.next
-    } else {
-      current.next = new ListNode(l1.val)
-      l1 = l1.next
+    while (l1 || l2) {
+        if (!l2) {
+            current.next = new ListNode(l1.val);
+            l1 = l1.next;
+        } else if (!l1) {
+            current.next = new ListNode(l2.val);
+            l2 = l2.next;
+        } else if (l1.val > l2.val) {
+            current.next = new ListNode(l2.val);
+            l2 = l2.next;
+        } else {
+            current.next = new ListNode(l1.val);
+            l1 = l1.next;
+        }
+        current = current.next;
     }
-    current = current.next
-  }
 
-  return res.next
-}
+    return res.next;
+};
 
 class ListNode {
-  constructor(value) {
-    this.value = value
-    this.next = null
-  }
+    constructor(value) {
+        this.value = value;
+        this.next = null;
+    }
 }
 
-module.exports = mergeTwoLists
+module.exports = mergeTwoLists;
